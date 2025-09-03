@@ -1,6 +1,6 @@
-package org.equipe39;
+package org.equipe45;
 
-import org.equipe39.domain.CNCController;
+import org.equipe45.domain.CNCController;
 
 import javax.swing.*;
 import java.awt.*;

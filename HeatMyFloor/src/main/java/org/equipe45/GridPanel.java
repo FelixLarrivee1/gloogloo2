@@ -1,8 +1,8 @@
-package org.equipe39;
+package org.equipe45;
 
 
 
-import org.equipe39.drawing.Afficheur;
+import org.equipe45.drawing.Afficheur;
 
 import javax.swing.*;
 import java.awt.*;

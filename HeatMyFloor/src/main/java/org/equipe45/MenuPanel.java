@@ -1,9 +1,9 @@
-package org.equipe39;
+package org.equipe45;
 
 
-import org.equipe39.domain.ConversionPiedMM;
-import org.equipe39.dto.CutDTO;
-import org.equipe39.dto.VerticalLineDTO;
+import org.equipe45.domain.ConversionPiedMM;
+import org.equipe45.dto.CutDTO;
+import org.equipe45.dto.VerticalLineDTO;
 
 import javax.swing.*;
 import javax.swing.border.TitledBorder;

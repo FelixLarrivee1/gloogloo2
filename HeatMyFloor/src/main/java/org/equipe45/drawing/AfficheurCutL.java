@@ -1,0 +1,57 @@
+package org.drawing;
+
+import java.awt.Color;
+import java.awt.Graphics;
+
+import org.equipe45.domain.ConversionPiedMM;
+import org.equipe45.dto.LDTO;
+import org.equipe45.dto.PanelDTO;
+import org.equipe45.dto.RestrictedAreaDTO;
+
+public class AfficheurCutL extends AfficheurCut {
+    private LDTO lDTO;
+
+    public AfficheurCutL(LDTO lDTO) {
+        super(lDTO);
+        this.lDTO = lDTO;
+    }
+
+
+    @Override
+    public void draw(Graphics g, int currentGridSize) {
+
+    }
+
+    @Override
+    public void draw(Graphics g, int currentGridSize, int offsetX, int offsetY) {
+        //x, y, widthFactor, heightFactor, no initialGridSize
+        /*double adjustedX = (this.restrictedAreaDTO.x / ConversionPiedMM.FACTEUR_CONVERSION) * currentGridSize - offsetX;
+        double adjustedY = (this.restrictedAreaDTO.y / ConversionPiedMM.FACTEUR_CONVERSION) * currentGridSize - offsetY;
+        double adjustedWidth = (this.restrictedAreaDTO.widthFactor / ConversionPiedMM.FACTEUR_CONVERSION) * currentGridSize;
+        double adjustedHeight = (this.restrictedAreaDTO.heightFactor / ConversionPiedMM.FACTEUR_CONVERSION) * currentGridSize;
+
+        g.setColor(Color.RED);
+        g.fillRect((int)adjustedX, (int)adjustedY, (int)adjustedWidth, (int)adjustedHeight);*/
+
+        double adjustedX1 = (this.lDTO.x / ConversionPiedMM.FACTEUR_CONVERSION) * currentGridSize - offsetX;
+        double adjustedY1 = (this.lDTO.y / ConversionPiedMM.FACTEUR_CONVERSION) * currentGridSize - offsetY;
+        double adjustedX2 = (this.lDTO.referencePoint.point.getX() / ConversionPiedMM.FACTEUR_CONVERSION) * currentGridSize - offsetX;
+        double adjustedY2 = (this.lDTO.referencePoint.point.getY() / ConversionPiedMM.FACTEUR_CONVERSION) * currentGridSize - offsetY;
+
+
+
+        if(lDTO.isSelected)
+        {
+            g.setColor(Color.RED);
+        }
+        else
+        {
+            g.setColor(Color.BLACK);
+        }
+
+
+        g.drawLine((int)adjustedX1, (int)adjustedY1, (int)adjustedX1, (int)adjustedY2);
+        g.drawLine((int)adjustedX1, (int)adjustedY1, (int)adjustedX2, (int)adjustedY1);
+
+    }
+}
