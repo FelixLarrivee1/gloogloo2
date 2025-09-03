@@ -1,10 +1,9 @@
 package org.equipe39.drawing;
 
-import java.awt.Color;
-import java.awt.Graphics;
-
 import org.equipe39.domain.ConversionPiedMM;
 import org.equipe39.dto.PanelDTO;
+
+import java.awt.*;
 
 public class AfficheurPanel implements ViewDrawer {
     private PanelDTO panelDTO;

@@ -1,10 +1,11 @@
 package org.equipe39.drawing;
 
-import java.awt.Color;
-import java.awt.Graphics;
-
 import org.equipe39.domain.ConversionPiedMM;
-import org.equipe39.dto.*;
+import org.equipe39.dto.CutDTO;
+import org.equipe39.dto.CutLineDTO;
+import org.equipe39.dto.OutilDTO;
+
+import java.awt.*;
 
 public class AfficheurCutLine implements ViewDrawer {
     private CutLineDTO cutLineDTO;

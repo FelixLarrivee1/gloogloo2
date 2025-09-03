@@ -1,13 +1,11 @@
 package org.equipe39.domain.Cut;
 
-import java.awt.geom.Point2D;
-import java.util.ArrayList;
-import java.util.List;
-import org.equipe39.domain.ConversionPiedMM;
 import org.equipe39.domain.CutLine;
 import org.equipe39.dto.RestrictedAreaDTO;
 
-import java.awt.*;
+import java.awt.geom.Point2D;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 public class RestrictedArea extends Cut {

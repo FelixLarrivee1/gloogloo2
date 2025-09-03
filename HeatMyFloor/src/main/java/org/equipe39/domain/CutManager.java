@@ -1,16 +1,11 @@
 package org.equipe39.domain;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.equipe39.domain.Cut.*;
-import org.equipe39.dto.*;
 
-import javax.sound.sampled.*;
-import java.awt.*;
 import java.awt.geom.Point2D;
-import java.io.File;
-import java.io.IOException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 

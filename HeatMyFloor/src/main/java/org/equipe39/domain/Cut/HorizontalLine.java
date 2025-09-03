@@ -4,14 +4,11 @@ package org.equipe39.domain.Cut;
 
 import org.equipe39.domain.CutLine;
 import org.equipe39.domain.Outil;
-import org.equipe39.dto.CutLineDTO;
 import org.equipe39.dto.HorizontalLineDTO;
 
-import java.awt.*;
 import java.awt.geom.Point2D;
 import java.util.List;
 import java.util.UUID;
-import java.util.stream.Collectors;
 
 public class HorizontalLine extends Cut {
     private List<CutLine> cutLines;

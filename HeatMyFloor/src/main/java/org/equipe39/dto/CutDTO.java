@@ -1,7 +1,6 @@
 package org.equipe39.dto;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
+
 import org.equipe39.domain.Cut.Cut;
 import org.equipe39.domain.InteractiveEntity;
 
@@ -13,8 +12,8 @@ public abstract class CutDTO extends InteractiveEntityDTO {
     //public boolean isSelected;
 
 
-    @JsonCreator
-    public CutDTO(@JsonProperty("id") UUID id, @JsonProperty("isSelected") boolean isSelected) {
+    //
+    public CutDTO( UUID id, boolean isSelected) {
         super(id, isSelected);
     }
 

@@ -5,7 +5,7 @@ import org.equipe39.dto.CutDTO;
 import org.equipe39.dto.InteractiveEntityDTO;
 import org.equipe39.dto.PointReferenceDTO;
 
-import java.awt.Graphics;
+import java.awt.*;
 
 public class Afficheur {
 

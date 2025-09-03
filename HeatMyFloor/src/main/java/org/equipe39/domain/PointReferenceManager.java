@@ -1,14 +1,12 @@
 package org.equipe39.domain;
 
 
-import org.equipe39.domain.Cut.*;
-import org.equipe39.domain.CutLine;
-import org.equipe39.domain.PointReference;
+import org.equipe39.domain.Cut.Cut;
+import org.equipe39.domain.Cut.L;
+import org.equipe39.domain.Cut.Square;
 
-import java.awt.*;
 import java.awt.geom.Point2D;
 import java.util.*;
-import java.util.List;
 
 public class PointReferenceManager {
     private List<PointReference> pointReference;// = new ArrayList<>();

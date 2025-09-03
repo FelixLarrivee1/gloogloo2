@@ -1,7 +1,6 @@
 package org.equipe39.dto;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
+
 import org.equipe39.domain.InteractiveEntity;
 import org.equipe39.domain.Panel;
 
@@ -15,14 +14,14 @@ public class PanelDTO extends InteractiveEntityDTO{
 
     //public double initialGridSize;
 
-    @JsonCreator
-    public PanelDTO(@JsonProperty("id") UUID id,
-                    @JsonProperty("isSelected") boolean isSelected,
-                    @JsonProperty("x") double x,
-                    @JsonProperty("y") double y,
-                    @JsonProperty("widthFactor") double widthFactor,
-                    @JsonProperty("heightFactor") double heightFactor,
-                    @JsonProperty("epaisseur") double epaisseur) {
+    
+    public PanelDTO( UUID id,
+                     boolean isSelected,
+                     double x,
+                     double y,
+                     double widthFactor,
+                    double heightFactor,
+                     double epaisseur) {
         super(id, isSelected);
         this.x = x;
         this.y = y;

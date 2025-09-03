@@ -1,9 +1,9 @@
 package org.equipe39.drawing;
 
-import java.awt.*;
-
 import org.equipe39.domain.ConversionPiedMM;
 import org.equipe39.dto.BordureDTO;
+
+import java.awt.*;
 
 public class AfficheurCutBordure extends AfficheurCut {
     private BordureDTO bordureDTO;

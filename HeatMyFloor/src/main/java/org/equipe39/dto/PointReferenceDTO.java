@@ -1,12 +1,9 @@
 package org.equipe39.dto;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import org.equipe39.domain.CutLine;
+
 import org.equipe39.domain.InteractiveEntity;
 import org.equipe39.domain.PointReference;
 
-import java.awt.*;
 import java.awt.geom.Point2D;
 import java.util.UUID;
 
@@ -19,13 +16,13 @@ public class PointReferenceDTO extends InteractiveEntityDTO {
     public CutLineDTO cutLineOrigin2;
     public static final double HITBOX_SIZE = 16;
 
-    @JsonCreator
-    public PointReferenceDTO(@JsonProperty("id") UUID id,
-                             @JsonProperty("isSelected") boolean isSelected,
-                             @JsonProperty("isHovered") boolean isHovered,
-                             @JsonProperty("point") Point2D.Double point,
-                             @JsonProperty("cutLineOrigin1") CutLineDTO cutLineOrigin1,
-                             @JsonProperty("cutLineOrigin2") CutLineDTO cutLineOrigin2
+    
+    public PointReferenceDTO( UUID id,
+                              boolean isSelected,
+                              boolean isHovered,
+                              Point2D.Double point,
+                              CutLineDTO cutLineOrigin1,
+                              CutLineDTO cutLineOrigin2
      ) {
         super(id, isSelected);
         this.id = id;

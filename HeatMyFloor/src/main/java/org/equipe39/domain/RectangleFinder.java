@@ -1,14 +1,9 @@
 package org.equipe39.domain;
 
-import java.awt.Point;
-import java.awt.geom.Point2D;
-import java.util.*;
-
-
-
-
-import java.util.*;
-import java.awt.geom.Point2D;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
 
 public class RectangleFinder {
 

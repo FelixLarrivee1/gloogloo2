@@ -51,10 +51,10 @@ public class AfficheurCutHorizontal extends AfficheurCut {
 
 package org.equipe39.drawing;
 
-import java.awt.*;
-
 import org.equipe39.domain.ConversionPiedMM;
 import org.equipe39.dto.HorizontalLineDTO;
+
+import java.awt.*;
 
 public class AfficheurCutHorizontal extends AfficheurCut {
     private HorizontalLineDTO horizontalLineDTO;

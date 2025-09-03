@@ -1,16 +1,11 @@
 package org.equipe39.domain.Cut;
 
 
-import org.equipe39.domain.ConversionPiedMM;
 import org.equipe39.domain.CutLine;
 import org.equipe39.domain.Outil;
 import org.equipe39.domain.PointReference;
-import org.equipe39.dto.CutDTO;
 import org.equipe39.dto.LDTO;
-import org.equipe39.dto.PointReferenceDTO;
-import org.equipe39.dto.SquareDTO;
 
-import java.awt.*;
 import java.awt.geom.Point2D;
 import java.util.List;
 import java.util.UUID;

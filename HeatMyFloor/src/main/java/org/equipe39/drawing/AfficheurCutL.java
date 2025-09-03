@@ -1,9 +1,9 @@
 package org.equipe39.drawing;
 
-import java.awt.*;
-
 import org.equipe39.domain.ConversionPiedMM;
 import org.equipe39.dto.LDTO;
+
+import java.awt.*;
 
 public class AfficheurCutL extends AfficheurCut {
     private LDTO lDTO;

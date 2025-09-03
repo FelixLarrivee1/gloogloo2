@@ -1,11 +1,9 @@
 package org.equipe39.drawing;
 
-import java.awt.*;
-
 import org.equipe39.domain.ConversionPiedMM;
 import org.equipe39.dto.VerticalLineDTO;
 
-import static java.lang.Math.round;
+import java.awt.*;
 
 public class AfficheurCutVertical extends AfficheurCut {
     private VerticalLineDTO verticalLineDTO;

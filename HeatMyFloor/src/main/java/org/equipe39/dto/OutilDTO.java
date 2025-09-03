@@ -2,8 +2,7 @@
 
 package org.equipe39.dto;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
+
 import org.equipe39.domain.Outil;
 
 import java.util.UUID;
@@ -18,8 +17,8 @@ public class OutilDTO {
         this.name = name;
         this.epaisseur = epaisseur;
     }
-    @JsonCreator
-    public OutilDTO(@JsonProperty("id") UUID id, @JsonProperty("name") String name, @JsonProperty("epaisseur") double epaisseur) {
+    
+    public OutilDTO( UUID id,  String name,  double epaisseur) {
         this.id = id;
         this.name = name;
         this.epaisseur = epaisseur;

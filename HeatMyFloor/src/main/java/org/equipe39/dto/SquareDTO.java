@@ -1,16 +1,10 @@
 
 package org.equipe39.dto;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
+
 import org.equipe39.domain.Cut.Cut;
 import org.equipe39.domain.Cut.Square;
-import org.equipe39.domain.InteractiveEntity;
-import org.equipe39.domain.Outil;
-import org.equipe39.domain.PointReference;
-import org.equipe39.domain.Outil;
 
-import java.awt.*;
 import java.util.UUID;
 
 public class SquareDTO extends CutDTO {
@@ -20,16 +14,16 @@ public class SquareDTO extends CutDTO {
     public double profondeur;
     public PointReferenceDTO referencePoint;
 
-    @JsonCreator
-    public SquareDTO(@JsonProperty("id") UUID id,
-                     @JsonProperty("isSelected") boolean isSelected,
-                     @JsonProperty("x") double x,
-                     @JsonProperty("y") double y,
-                     @JsonProperty("widthFactor") double widthFactor,
-                     @JsonProperty("heightFactor") double heightFactor,
-                     @JsonProperty("tool") OutilDTO tool,
-                     @JsonProperty("profondeur") double profondeur,
-                     @JsonProperty("referencePoint") PointReferenceDTO referencePoint) {
+    
+    public SquareDTO( UUID id,
+                      boolean isSelected,
+                      double x,
+                      double y,
+                      double widthFactor,
+                     double heightFactor,
+                     OutilDTO tool,
+                      double profondeur,
+                      PointReferenceDTO referencePoint) {
         super(id, isSelected);
         this.id =id;
         this.isSelected = isSelected;

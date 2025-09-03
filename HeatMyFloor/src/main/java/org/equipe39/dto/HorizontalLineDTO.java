@@ -1,13 +1,9 @@
 package org.equipe39.dto;
 
 
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import org.equipe39.domain.Cut.HorizontalLine;
-import org.equipe39.domain.InteractiveEntity;
-import org.equipe39.domain.Outil;
 
-import java.awt.Color;
+import org.equipe39.domain.Cut.HorizontalLine;
+
 import java.util.UUID;
 
 public class HorizontalLineDTO extends CutDTO {
@@ -16,12 +12,12 @@ public class HorizontalLineDTO extends CutDTO {
     public OutilDTO tool;
 
 
-    @JsonCreator
-    public HorizontalLineDTO(@JsonProperty("id") UUID id,
-                             @JsonProperty("isSelected") boolean isSelected,
-                             @JsonProperty("y") double y,
-                             @JsonProperty("profondeur") double profondeur,
-                             @JsonProperty("tool") OutilDTO tool) {
+    
+    public HorizontalLineDTO( UUID id,
+                              boolean isSelected,
+                              double y,
+                              double profondeur,
+                             OutilDTO tool) {
         super(id, isSelected);
         this.y = y;
         this.profondeur = profondeur;

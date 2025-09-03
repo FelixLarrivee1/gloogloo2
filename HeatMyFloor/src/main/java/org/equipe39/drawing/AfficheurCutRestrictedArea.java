@@ -1,9 +1,9 @@
 package org.equipe39.drawing;
 
-import java.awt.*;
-
 import org.equipe39.domain.ConversionPiedMM;
 import org.equipe39.dto.RestrictedAreaDTO;
+
+import java.awt.*;
 
 public class AfficheurCutRestrictedArea extends AfficheurCut {
     private RestrictedAreaDTO restrictedAreaDTO;

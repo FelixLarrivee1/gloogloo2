@@ -5,7 +5,6 @@ import org.equipe39.domain.CutLine;
 import org.equipe39.domain.Outil;
 import org.equipe39.dto.VerticalLineDTO;
 
-import java.awt.*;
 import java.awt.geom.Point2D;
 import java.util.List;
 import java.util.UUID;

@@ -1,6 +1,5 @@
 package org.equipe39;
 
-import org.equipe39.domain.CNCController;
 import org.equipe39.domain.ConversionPiedMM;
 import org.equipe39.drawing.Afficheur;
 import org.equipe39.dto.PanelDTO;
@@ -8,10 +7,9 @@ import org.equipe39.dto.PanelDTO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.awt.geom.AffineTransform;
 import java.awt.geom.Point2D;
 
-import static java.lang.System.*;
+import static java.lang.System.out;
 
 public class GridPanel extends JPanel implements MouseWheelListener {
 

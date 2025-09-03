@@ -4,13 +4,9 @@
 package org.equipe39.dto;
 
 
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import org.equipe39.domain.Cut.L;
-import org.equipe39.domain.InteractiveEntity;
-import org.equipe39.domain.Outil;
 
-import java.awt.Color;
+import org.equipe39.domain.Cut.L;
+
 import java.util.UUID;
 
 public class LDTO extends CutDTO {
@@ -21,16 +17,16 @@ public class LDTO extends CutDTO {
     public PointReferenceDTO referencePoint;
 
 
-    @JsonCreator
-    public LDTO(@JsonProperty("id") UUID id,
-                @JsonProperty("isSelected") boolean isSelected,
-                @JsonProperty("x") double x,
-                @JsonProperty("y") double y,
-                @JsonProperty("widthFactor") double widthFactor,
-                @JsonProperty("heightFactor") double heightFactor,
-                @JsonProperty("tool") OutilDTO tool,
-                @JsonProperty("profondeur") double profondeur,
-                @JsonProperty("referencePoint") PointReferenceDTO referencePoint) {
+    
+    public LDTO( UUID id,
+                 boolean isSelected,
+                 double x,
+                 double y,
+                 double widthFactor,
+                double heightFactor,
+                OutilDTO tool,
+                 double profondeur,
+                 PointReferenceDTO referencePoint) {
         super(id, isSelected);
         this.id = id;
         this.isSelected = isSelected;

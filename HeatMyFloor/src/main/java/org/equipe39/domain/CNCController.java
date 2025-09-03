@@ -1,30 +1,18 @@
 package org.equipe39.domain;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import org.equipe39.MenuPanel;
+//import com.fasterxml.jackson.core.JsonProcessingException;
+//import com.fasterxml.jackson.databind.ObjectMapper;
 import org.equipe39.domain.Cut.*;
-
 import org.equipe39.dto.*;
-import org.equipe39.domain.Panel;
-
-//import org.equipe39.domain.PanelManager;
-
 
 import javax.sound.sampled.*;
-import java.awt.*;
-//import java.awt.Panel;
 import java.awt.geom.Point2D;
 import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.ObjectOutputStream;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import java.io.File;
-import java.io.IOException;
-import java.util.List;
+import java.util.UUID;
 
 //import com.fasterxml.jackson.databind.ObjectMapper;
 //import com.fasterxml.jackson.databind.ObjectWriter;
@@ -718,15 +706,15 @@ public void setSelectedCuttingMethod(String selectedCuttingMethod)
 
     public void generateDotPANFile()  {
 
-        ObjectMapper objectMapper = new ObjectMapper();
-
-        String jsonString = null;
-        try {
-            jsonString = objectMapper.writeValueAsString(this.getAllInteractiveEntities());
-        } catch (JsonProcessingException e) {
-            throw new RuntimeException(e);
-        }
-        System.out.println(jsonString); // Output: {"name":"John","age":30}
+        //ObjectMapper objectMapper = new ObjectMapper();
+//
+        //String jsonString = null;
+        //try {
+        //    jsonString = objectMapper.writeValueAsString(this.getAllInteractiveEntities());
+        //} catch (JsonProcessingException e) {
+        //    throw new RuntimeException(e);
+        //}
+        //System.out.println(jsonString); // Output: {"name":"John","age":30}
     }
 
 
@@ -1342,10 +1330,10 @@ public void setSelectedCuttingMethod(String selectedCuttingMethod)
         SaveData saveData = new SaveData(panelDTO, outils, entities);
 
 
-        ObjectMapper mapper = new ObjectMapper();
-        mapper.writerWithDefaultPrettyPrinter().writeValue(file, saveData);
-
-        System.out.println("Données sauvegardées avec succès dans " + file.getAbsolutePath());
+        //ObjectMapper mapper = new ObjectMapper();
+        //mapper.writerWithDefaultPrettyPrinter().writeValue(file, saveData);
+//
+        //System.out.println("Données sauvegardées avec succès dans " + file.getAbsolutePath());
     }
 
     /*
@@ -1603,47 +1591,47 @@ public void setSelectedCuttingMethod(String selectedCuttingMethod)
 
 
     public void load(File file) throws IOException {
-        System.out.println("LOAD CALLED");
-        ObjectMapper mapper = new ObjectMapper();
-        // Grâce aux annotations sur vos DTO, Jackson sait maintenant quelle classe concrète instancier.
-        SaveData loadedData = mapper.readValue(file, SaveData.class);
+        //System.out.println("LOAD CALLED");
+        //ObjectMapper mapper = new ObjectMapper();
+        //// Grâce aux annotations sur vos DTO, Jackson sait maintenant quelle classe concrète instancier.
+        //SaveData loadedData = mapper.readValue(file, SaveData.class);
 
-        // Nettoyer l'état actuel
+        //// Nettoyer l'état actuel
 
-        this.outils.clear();
-        this.cutManager.getCuts().clear();
-        this.pointReferenceManager.appendEveryCutLine();
-        this.pointReferenceManager.getPointReference().clear();
-        this.pointReferenceManager.getReferencePoints();
-
+        //this.outils.clear();
+        //this.cutManager.getCuts().clear();
+        //this.pointReferenceManager.appendEveryCutLine();
+        //this.pointReferenceManager.getPointReference().clear();
         //this.pointReferenceManager.getReferencePoints();
 
-        this.panelManager.panel = loadedData.panelDTO.toPanel();
-        //this.pointReferenceManager.cutLines.addAll(panelManager.panel.getCutLines());
+        ////this.pointReferenceManager.getReferencePoints();
 
-        // Mettre à jour la liste d'outils
-        setOutils(loadedData.outils);
+        //this.panelManager.panel = loadedData.panelDTO.toPanel();
+        ////this.pointReferenceManager.cutLines.addAll(panelManager.panel.getCutLines());
 
-        List<InteractiveEntityDTO> remainingDTOs = new ArrayList<>();
+        //// Mettre à jour la liste d'outils
+        //setOutils(loadedData.outils);
 
-        for(InteractiveEntityDTO dto : loadedData.entities) {
-            if (!(dto instanceof PanelDTO)) {
-                remainingDTOs.add(dto);
-                if(dto instanceof PointReferenceDTO)
-                {
-                    pointReferenceManager.addPointReference(((PointReferenceDTO) dto).toPointReference());
-                }
-                else if(dto instanceof CutDTO)
-                {
-                    System.out.println("[DEBUG] new cut ajouté: " + dto);
-                    Cut unDTOed = ((CutDTO) dto).toCut();
-                    cutManager.addCutAtLoad(unDTOed);
-                    this.pointReferenceManager.cutLines.addAll(unDTOed.getCutLines());
-                }
-            }
-        }
-        System.out.println("Currently in cutlines: " + this.pointReferenceManager.cutLines);
-        this.pointReferenceManager.getReferencePoints();
+        //List<InteractiveEntityDTO> remainingDTOs = new ArrayList<>();
+
+        //for(InteractiveEntityDTO dto : loadedData.entities) {
+        //    if (!(dto instanceof PanelDTO)) {
+        //        remainingDTOs.add(dto);
+        //        if(dto instanceof PointReferenceDTO)
+        //        {
+        //            pointReferenceManager.addPointReference(((PointReferenceDTO) dto).toPointReference());
+        //        }
+        //        else if(dto instanceof CutDTO)
+        //        {
+        //            System.out.println("[DEBUG] new cut ajouté: " + dto);
+        //            Cut unDTOed = ((CutDTO) dto).toCut();
+        //            cutManager.addCutAtLoad(unDTOed);
+        //            this.pointReferenceManager.cutLines.addAll(unDTOed.getCutLines());
+        //        }
+        //    }
+        //}
+        //System.out.println("Currently in cutlines: " + this.pointReferenceManager.cutLines);
+        //this.pointReferenceManager.getReferencePoints();
     }
 
 

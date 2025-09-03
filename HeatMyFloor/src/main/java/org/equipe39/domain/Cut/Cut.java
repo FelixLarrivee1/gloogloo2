@@ -5,10 +5,7 @@ package org.equipe39.domain.Cut;
 
 import org.equipe39.domain.CutLine;
 import org.equipe39.domain.InteractiveEntity;
-import org.equipe39.dto.CutDTO;
 
-import java.awt.*;
-import java.util.UUID;
 import java.util.List;
 
 public abstract class Cut extends InteractiveEntity {

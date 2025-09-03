@@ -1,9 +1,7 @@
 package org.equipe39.domain;
 
 import org.equipe39.dto.PointReferenceDTO;
-import org.equipe39.dto.CutLineDTO;
 
-import java.awt.*;
 import java.awt.geom.Point2D;
 import java.util.Objects;
 import java.util.UUID;

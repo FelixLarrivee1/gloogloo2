@@ -1,9 +1,9 @@
 package org.equipe39.drawing;
 
-import java.awt.*;
-
 import org.equipe39.domain.ConversionPiedMM;
 import org.equipe39.dto.SquareDTO;
+
+import java.awt.*;
 
 public class AfficheurCutSquare extends AfficheurCut {
     private SquareDTO squareDTO;

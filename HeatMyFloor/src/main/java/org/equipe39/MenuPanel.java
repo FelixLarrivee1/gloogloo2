@@ -1,19 +1,15 @@
 package org.equipe39;
 
-import java.awt.*;
-import java.awt.event.ActionListener;
-import java.util.ArrayList;
-import java.util.List;
-
-import org.equipe39.domain.CNCController;
 import org.equipe39.domain.ConversionPiedMM;
-import org.equipe39.domain.InteractiveEntity;
 import org.equipe39.dto.*;
 
 import javax.swing.*;
-
-import java.io.*;
-import java.awt.event.ActionEvent;
+import java.awt.*;
+import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MenuPanel extends JPanel {
 

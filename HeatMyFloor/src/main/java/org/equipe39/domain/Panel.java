@@ -3,7 +3,6 @@ package org.equipe39.domain;
 import org.equipe39.dto.InteractiveEntityDTO;
 import org.equipe39.dto.PanelDTO;
 
-import java.awt.*;
 import java.awt.geom.Point2D;
 import java.util.ArrayList;
 import java.util.List;

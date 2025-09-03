@@ -40,16 +40,11 @@ public class CutLine
 package org.equipe39.domain;
 
 import org.equipe39.domain.Cut.Cut;
-import org.equipe39.dto.CutDTO;
 import org.equipe39.dto.CutLineDTO;
 import org.equipe39.dto.InteractiveEntityDTO;
 
-import java.awt.*;
 import java.awt.geom.Point2D;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
-import java.util.UUID;
 
 public class CutLine {
     private final int id;

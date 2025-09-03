@@ -2,7 +2,7 @@ package org.equipe39.drawing;
 
 import org.equipe39.dto.CutDTO;
 
-import java.awt.Graphics;
+import java.awt.*;
 
 public abstract class AfficheurCut implements ViewDrawer {
     protected CutDTO cutDTO;

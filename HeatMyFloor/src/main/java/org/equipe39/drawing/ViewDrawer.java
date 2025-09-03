@@ -1,5 +1,6 @@
 package org.equipe39.drawing;
-import java.awt.Graphics;
+
+import java.awt.*;
 
 public interface ViewDrawer {
     public void draw(Graphics g,  int currentGridSize);

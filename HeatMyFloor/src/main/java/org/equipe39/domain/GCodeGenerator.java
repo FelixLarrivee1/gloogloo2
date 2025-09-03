@@ -2,9 +2,7 @@ package org.equipe39.domain;
 
 
 import org.equipe39.domain.Cut.*;
-import org.equipe39.domain.CutLine;
 
-import java.awt.Point;
 import java.awt.geom.Point2D;
 import java.io.BufferedWriter;
 import java.io.File;

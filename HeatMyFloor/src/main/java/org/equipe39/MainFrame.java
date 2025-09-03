@@ -3,10 +3,8 @@ package org.equipe39;
 import org.equipe39.domain.CNCController;
 import org.equipe39.dto.PanelDTO;
 
-
 import javax.swing.*;
 import java.awt.*;
-import java.util.ArrayList;
 
 public class MainFrame extends JFrame {
 
